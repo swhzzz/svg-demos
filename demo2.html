@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <svg width="1000" height="300">
+        <rect x="10" y="10" rx="50" ry="50" width="50" height="50" fill="red" fill-opacity="0.5" stroke="black" stroke-width="10" ></rect>
+        <ellipse cx="120" cy="35" rx="40" ry="15" fill="green" ></ellipse>
+        <line x1="0" y1="70" x2="100" y2="100" stroke="blue" stroke-width="5" ></line>
+        <polyline points="0 0 25 50 100 100" stroke="orange" stroke-width="5" fill="transparent"></polyline>
+        <polygon points="0 50 25 100 100 150" stroke="orange" stroke-opacity="0.5" stroke-width="5" fill="transparent"></polygon>
+    </svg>
+    <ol>
+        <li>stroke-width变大时，width和height会变小，当超出width和height时会导致占据浏览器的空间发生改变</li>
+        <li>fill-opacity表示填充颜色的透明度，同理stroke-opacity</li>
+        <li>当rx=ry=width=height时，会变成圆形</li>
+        <li>用circle或者ellipse时不需要设置x,y只需要设置rx,ry（圆心）即可，设置x，y无效</li>
+        <li>line只接受两个点的坐标，要使用多个点需要用到polyline（折线）</li>
+        <li>polyline只有两个点时，只形成直线</li>
+        <li>polyline会形成折线，默认填充黑色，可以通过fill="transparent"设置为透明</li>
+        <li>polygon形成封闭的多边形，使用方法同polyline，但是会将第一点和最后一点连接在一起</li>
+    </ol>
+</body>
+
+</html>
